@@ -199,28 +199,36 @@ node_s* maximum_node_str(node_s* root)
 
 
 int minimum_int(node* root){
+    printf("%s-> ",__func__);
     return minimum_node_int(root)->data;
 }
 float minimum_float(node_f* root){
+    printf("%s-> ",__func__);
     return minimum_node_float(root)->data;
 }
 double minimum_double(node_d* root){
+    printf("%s-> ",__func__);
     return minimum_node_double(root)->data;
 }
 char* minimum_str(node_s* root){
+    printf("%s-> ",__func__);
     return minimum_node_str(root)->data;
 }
 
 int maximum_int(node* root){
+    printf("%s-> ",__func__);
     return maximum_node_int(root)->data;
 }
 float maximum_float(node_f* root){
+    printf("%s-> ",__func__);
     return maximum_node_float(root)->data;
 }
 double maximum_double(node_d* root){
+    printf("%s-> ",__func__);
     return maximum_node_double(root)->data;
 }
 char* maximum_str(node_s* root){
+    printf("%s-> ",__func__);
     return maximum_node_str(root)->data;
 }
 
@@ -266,23 +274,27 @@ node_s* find_node_str(node_s* root, char* data){
         return find_node_str(root->left, data);
 }
 
-int is_there_int(node* root, int data)
+int find_int(node* root, int data)
 {
+    printf("%s-> ",__func__);
     // find node NULL döndüyse yani bulamadı ise NULL && 1 -> 0 döndürür, eğer bulduysa yani null dışında birey döndüyse all && 1 ->1 döndürür. 
     return find_node_int(root, data) && 1;
 }
-int is_there_float(node_f* root, float data)
+int find_float(node_f* root, float data)
 {
+    printf("%s-> ",__func__);
     // find node NULL döndüyse yani bulamadı ise NULL && 1 -> 0 döndürür, eğer bulduysa yani null dışında birey döndüyse all && 1 ->1 döndürür. 
     return find_node_float(root, data) && 1;
 }
-int is_there_double(node_d* root, double data)
+int find_double(node_d* root, double data)
 {
+    printf("%s-> ",__func__);
     // find node NULL döndüyse yani bulamadı ise NULL && 1 -> 0 döndürür, eğer bulduysa yani null dışında birey döndüyse all && 1 ->1 döndürür. 
     return find_node_double(root, data) && 1;
 }
-int is_there_str(node_s* root, char* data)
+int find_str(node_s* root, char* data)
 {
+    printf("%s-> ",__func__);
     // find node NULL döndüyse yani bulamadı ise NULL && 1 -> 0 döndürür, eğer bulduysa yani null dışında birey döndüyse all && 1 ->1 döndürür. 
     return find_node_str(root, data) && 1;
 }
@@ -345,13 +357,13 @@ void in_order_travelsal_string(node_s *root)
 
 //! init Fonksiyonları
 node* init_int(int data){
-        node* root = (node *)malloc(sizeof(node));
-        root->color = BLACK;
-        root->data = data;
-        root->left = NULL;
-        root->right = NULL;
-        root->parent = NULL;
-        return root;
+    node* root = (node *)malloc(sizeof(node));
+    root->color = BLACK;
+    root->data = data;
+    root->left = NULL;
+    root->right = NULL;
+    root->parent = NULL;
+    return root;
 }
 node_d* init_double(double data){
         node_d* root = (node_d *)malloc(sizeof(node_d));

@@ -17,7 +17,6 @@ int main(int argc, char const *argv[])
     insert(root, 18);
     insert(root, 0);
 
-    printf("root: %d\n",root->data);
     printf("Sol->Kök->Sağ şeklinde dolaşım: ");
     in_order_travelsal(root);// Sol Root Sağ
     printf("\n");
@@ -28,11 +27,11 @@ int main(int argc, char const *argv[])
     post_order_travelsal_int(root);// Sol Sqğ Root
     printf("\n");
 
-    printf("%d is there in tree: %s\n",0, is_there(root, 0) ? "Var":"Yok");
-    printf("%d is there in tree: %s\n",142, is_there(root, 142) ? "Var":"Yok");
+    printf("%d Agacta var mi?: -%s\n",0, find(root, 0) ? "Var":"Yok");
+    printf("%d Agacta var mi?: -%s\n",142, find(root, 142) ? "Var":"Yok");
 
-    printf("int minimum: %d\n", min(root));
-    printf("int maximum: %d\n", max(root));
+    printf("minimum: %d\n", min(root));
+    printf("maximum: %d\n", max(root));
 
 //!------------------------------------------------------ FLOAT ----------------------------------------------------
     printf("\n----FLOAT----\n");
@@ -43,15 +42,14 @@ int main(int argc, char const *argv[])
     insert(root_f, 2.35f);
     insert(root_f, 2.737f);
     insert(root_f, 91.63f);
-    printf("root_f: %f\n",root_f->data);
     printf("Sol->Kök->Sağ şeklinde dolaşım: ");
     in_order_travelsal(root_f);
     printf("\n");
 
-    printf("double minimum: %f\n", min(root_f));
-    printf("double maximum: %f\n", max(root_f));
-    printf("%.2f is there in tree: %s\n",3.21f, is_there(root_f, 3.21f) ? "Var":"Yok");
-    printf("%.2f is there in tree: %s\n",3.32f, is_there(root_f, 3.32f) ? "Var":"Yok");
+    printf("%.2f Agacta var mi?: -%s\n",3.21f, find(root_f, 3.21f) ? "Var":"Yok");
+    printf("%.2f Agacta var mi?: -%s\n",3.32f, find(root_f, 3.32f) ? "Var":"Yok");
+    printf("minimum: %f\n", min(root_f));
+    printf("maximum: %f\n", max(root_f));
 
 //!------------------------------------------------------ DOUBLE ----------------------------------------------------
     printf("\n----DOUBLE----\n");
@@ -62,33 +60,32 @@ int main(int argc, char const *argv[])
     insert(root_d, 2.25);
     insert(root_d, 14.87);
     insert(root_d, 4.55);
-    printf("root_d: %f\n",root_d->data);
+
     printf("Sol->Kök->Sağ şeklinde dolaşım: ");
     in_order_travelsal(root_d);
     printf("\n");
 
-    printf("double minimum: %F\n", min(root_d));
-    printf("double maximum: %F\n", max(root_d));
-    printf("%.2F is there in tree: %s\n",3.21, is_there(root_d, 3.21) ? "Var":"Yok");
-    printf("%.2F is there in tree: %s\n",3.32, is_there(root_d, 3.32) ? "Var":"Yok");
+    printf("%.2F Agacta var mi?: -%s\n",3.21, find(root_d, 3.21) ? "Var":"Yok");
+    printf("%.2F Agacta var mi?: -%s\n",3.32, find(root_d, 3.32) ? "Var":"Yok");
+    printf("minimum: %F\n", min(root_d));
+    printf("maximum: %F\n", max(root_d));
 
 //!------------------------------------------------------ STRING ----------------------------------------------------
     printf("\n----STRING----\n");
-    node_s* root_s = init("ha");
-    insert(root_s, "da");
-    insert(root_s, "ia");
-    insert(root_s, "ea");
-    insert(root_s, "ka");
-    insert(root_s, "na");
-    insert(root_s, "za");
-    printf("root_s: %s\n",root_s->data);
-    //printf("root_s->right: %s\n",root_s->right->data);
+    node_s* root_s = init("h");
+    insert(root_s, "d");
+    insert(root_s, "i");
+    insert(root_s, "e");
+    insert(root_s, "k");
+    insert(root_s, "n");
+    insert(root_s, "z");
+
     printf("Sol->Kök->Sağ şeklinde dolaşım: ");
     in_order_travelsal(root_s);
     printf("\n");
-    printf("string minimum: %s\n", min(root_s));
-    printf("string maximum: %s\n", max(root_s));
-    printf("%s is there in tree: %s\n", "mahmut", is_there(root_s, "mahmut") ? "Var":"Yok");
-    printf("%s is there in tree: %s\n", "za", is_there(root_s, "za") ? "Var":"Yok");
+    printf("%s Agacta var mi?: -%s\n", "m", find(root_s, "m") ? "Var":"Yok");
+    printf("%s Agacta var mi?: -%s\n", "z", find(root_s, "z") ? "Var":"Yok");
+    printf("minimum: %s\n", min(root_s));
+    printf("maximum: %s\n", max(root_s));
     return 0;
 }

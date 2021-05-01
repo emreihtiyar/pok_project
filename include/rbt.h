@@ -102,16 +102,16 @@ double maximum_double(node_d* root);
 char* maximum_str(node_s* root);
 
 
-#define is_there(root, data) _Generic((root), \
-    node*: is_there_int, \
-    node_f*: is_there_float, \
-    node_d*: is_there_double, \
-    node_s*: is_there_str \
+#define find(root, data) _Generic((root), \
+    node*: find_int, \
+    node_f*: find_float, \
+    node_d*: find_double, \
+    node_s*: find_str \
 )(root,data)
-int is_there_int(node* root, int data);
-int is_there_float(node_f* root, float data);
-int is_there_double(node_d* root, double data);
-int is_there_str(node_s* root, char* data);
+int find_int(node* root, int data);
+int find_float(node_f* root, float data);
+int find_double(node_d* root, double data);
+int find_str(node_s* root, char* data);
 
 
 #endif // __RB__
