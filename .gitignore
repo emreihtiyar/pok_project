@@ -6,3 +6,4 @@ test/shell_sort_test
 test/heap_sort_test
 test/djb_hash_test
 lib/
+readme.md
