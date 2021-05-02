@@ -56,3 +56,8 @@ skip: $(TESTDIR)/skip_list_test
 	@clear
 	@echo SKIP LIST TEST
 	@./$(TESTDIR)/skip_list_test
+
+djb: $(TESTDIR)/djb_hash_test
+	@clear
+	@echo DJB HASH TEST
+	@./$(TESTDIR)/djb_hash_test
